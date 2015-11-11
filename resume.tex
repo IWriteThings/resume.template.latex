@@ -3,11 +3,12 @@
 
 \documentclass{inc/res} 
 \usepackage{inc/helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
 \newsectionwidth{0pt}  % So the text is not indented under section headings
 \setlength{\textheight}{10.2in} % set text height big enough for box
 \topmargin=-.5in       % to start box .5in from top of page
 \oddsidemargin=-.5in   % to start box .5in from left of page
+
+\include{variables}
     
 \begin{document}
  
@@ -46,16 +47,20 @@
 \boxaround{ % put the text on the page inside a box  
 
 \name{MATTHEW M. PARKER\\[12pt]}
-\address{\bf Present Address\\2174 Seventh Street\\Troy, NY 12180\\
-        (518) 272-4460} 
-\address{\bf Permanent Address\\241 Park Avenue\\
-         New York, NY 01810\\ (212) 742-4937}
+%\address{\bf Present Address\\2174 Seventh Street\\Troy, NY 12180\\
+%        (518) 272-4460} 
+\address{\bf 
+	Permanent Address \\
+	\userAddressOneVar{}\\
+	\userAddressTwoVar{}\\
+	\userAddressCityVar{}, \userAddressStateVar{} \userAddressZipVar{}\\ 
+	\userPhoneVar{}}
 
  
 \begin{resume}
-
-\section{\sl  Objective}  % with postscript font \sl produces bold italic
-%                           with default font (CM) \sl produces slanted type
+% with postscript font \sl produces bold italic
+% with default font (CM) \sl produces slanted type
+\section{\sl  Objective}
 A  summer  position  in the field of Mechanical Engineering, with 
 emphasis on Automation/Robotics 
  
